@@ -25,7 +25,8 @@ tests = [
     ("bore through floor+pad",   "b", (H[0][0], H[0][1], 3.50), "void"),
     ("above pad is clear",       "b", (H[0][0], H[0][1], 5.50), "void"),
     ("screw counterbore",        "b", (H[0][0]+2.9, H[0][1], 0.80), "void"),
-    ("  floor beside c'bore",    "b", (H[0][0]+3.8, H[0][1], 0.80), "solid"),
+    ("  c'bore now Ø7.5",        "b", (H[0][0]+3.5, H[0][1], 0.80), "void"),
+    ("  floor beside c'bore",    "b", (H[0][0]+4.2, H[0][1], 0.80), "solid"),
     # ---- three ports on one 15 mm band, lifted 2.5 ----
     ("P1 opening",               "b", (1.20, BY+7.93,  15.00), "void"),
     ("  P1 bottom edge lifted",  "b", (1.20, BY+7.93,   8.00), "solid"),
@@ -74,6 +75,8 @@ tests = [
     ("  boss beside pilot",      "b", (85.60, 4.15, 24.00), "solid"),
     ("lid screw clearance",      "l", (84.00, 4.15, 30.00), "void"),
     ("lid screw counterbore",    "l", (84.00, 4.15, 31.00), "void"),
+    ("  lid c'bore now Ø7.5",    "l", (84.00+3.5, 4.15, 31.00), "void"),
+    ("  ...and no bigger",       "l", (84.00+4.1, 4.15, 31.00), "solid"),
     ("  lid beside screw hole",  "l", (86.00, 4.15, 30.00), "solid"),
     ("  rib cleared at boss",    "l", (84.00, 3.20, RIB_Z0+0.55), "void"),
     ("  rib present elsewhere",  "l", (50.00, 3.20, RIB_Z0+0.55), "solid"),
@@ -101,3 +104,5 @@ print("board top %.2f -> rib %.2f = %.2f mm battery clearance" % (
 print("board top %.2f -> lip bottom %.2f = %.2f" % (
     PCB_TOP+15.01, LIP_Z0, LIP_Z0-(PCB_TOP+15.01)))
 print("overall %.2f x %.2f x %.2f" % (122.0, 76.66, WALL_H+2.2))
+print("counterbores: 4x board Ø7.50 x 1.60 deep (floor underside), lid Ø7.50 x 1.30")
+print("lid c'bore rim -> lid front edge %.2f mm" % (4.15 - 7.50/2))

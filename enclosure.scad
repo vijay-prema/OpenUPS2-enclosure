@@ -56,7 +56,7 @@ CORNER  = 4.00;         // outside corner radius
 PAD_D    = 8.00;        // short pads on the floor that the board's offsets sit on
 PAD_H    = 2.00;
 SCR_D    = 3.40;        // clearance through floor + pad
-SCR_CB_D = 6.40;        // counterbore, underside, for the screw head
+SCR_CB_D = 7.50;        // counterbore, underside, for the screw head (was 6.40)
 SCR_CB_H = 1.60;
 
 /* [Lid hinge: lip on the back edge hooks into this groove] */
@@ -86,7 +86,7 @@ SCREW_Y = 4.15;
 PILOT_D = 2.75;                    // 6-32 tapping size for plastic
 PILOT_H = 8.00;
 LID_HOLE_D = 3.60;
-LID_CB_D   = 7.00;
+LID_CB_D   = 7.50;                 // was 7.00; leaves 0.40 to the lid's front edge
 LID_CB_H   = 1.30;
 
 /* [Vents: slots over the batteries, in the lid and in the floor] */
